@@ -22,7 +22,7 @@ import {
 
 import XDITTO_ABI from '../lib/contract/abi.json'
 import DITTO_ABI from '../lib/contract/DITTOAbi.json'
-
+import Mint_Factory_ABI from '../lib/contract/MintFactory.json'
 import MintButton from './MintButton';
 
 
@@ -80,6 +80,7 @@ export default function MintForm() {
     React.useEffect(() => {
         const getXDittoContract = async () => {
             const newXDittoContract = new ethers.Contract('0xed907a2aF9f64507E3b8b8F0c5c4fd086d1986A2', XDITTO_ABI, library.getSigner());
+            const MintFactory = new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner());
             setXDittoContract(newXDittoContract);
         }
 
@@ -183,7 +184,7 @@ export default function MintForm() {
                             <Typography>xDITTO</Typography>
                         </InputAdornment>,
                 }} />
-            <MintButton dittoContract={dittoContract} xDittoContract={xDittoContract} inputDitto={dittoInput} />
+            <MintButton dittoContract={dittoContract} xDittoContract={xDittoContract} inputDitto={dittoInput} mintfactory={MintFactory} />
         </form>
     );
 };

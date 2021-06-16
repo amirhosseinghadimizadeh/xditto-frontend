@@ -11,7 +11,7 @@ import Box from '@material-ui/core/Box';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import SimpleModal from './SimpleModal'
-import Mint_Factory_ABI from '../lib/contract/MintFactory.json'
+
 
 
 import {
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function FormButton({ xDittoContract, dittoContract, inputDitto }) {
+export default function FormButton({ xDittoContract, dittoContract, inputDitto,mintfactory }) {
     const classes = useStyles();
     const context = useWeb3React();
     const {
@@ -52,7 +52,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto }
     React.useEffect(() => {
 
         const getAllowanceAmount = async () => {
-            const dittoAllowance = await dittoContract.allowance(account, MintFactory.address);
+            const dittoAllowance = await dittoContract.allowance(account, mintfactory.address);
             const formattedDittoAllowance = ethers.utils.formatUnits(dittoAllowance, 18);
             setDittoAllowanceAmount(formattedDittoAllowance);
         }
@@ -66,12 +66,12 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto }
         await new Promise(r => setTimeout(r, 5000));
         setErrorMessage('');
     }
-    const MintFactory = new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner());
+
     const approveMint = async () => {
         const amountToApprove = ethers.utils.parseUnits(`1000000000000000000000000.0`, 18);
         setApprovalLoading(true);
         try {
-            const approvalTx = await dittoContract.approve(MintFactory.address, amountToApprove);
+            const approvalTx = await dittoContract.approve(mintfactory.address, amountToApprove);
             await approvalTx.wait();
             getAllowanceAmount();
         } catch (error) {
@@ -85,7 +85,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto }
         console.log(inputDittoToMintWith, inputDitto)
         setMintLoading(true);
         try {
-            const mintTx = await MintFactory.mint(inputDittoToMintWith);
+            const mintTx = await mintfactory.mint(inputDittoToMintWith);
             await mintTx.wait();
             setModalOpen(true);
         } catch (error) {
