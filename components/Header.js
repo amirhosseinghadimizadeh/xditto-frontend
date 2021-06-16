@@ -65,18 +65,18 @@ export default function Header({ setActivatingConnector, getErrorMessage }) {
                     height={'100%'}
                 />
                 <Box paddingLeft="20px">
-                    <Typography variant="h3" color="primary">Ditto</Typography>
+                    <Typography variant="h3" color="primary">GiftedHands</Typography>
                 </Box>
             </Box>
             <Box className={classes.mobileContainer} paddingTop={'2%'} justifyContent="center" alignItems="center">
                 <Image
                     src="/images/ditto.png"
-                    alt="Main Ditto logo mascot"
+                    alt="Main GiftedHands logo mascot"
                     width={'75%'}
                     height={'75%'}
                 />
                 <Box paddingLeft="5px">
-                    <Typography variant="h3" color="primary">Ditto</Typography>
+                    <Typography variant="h3" color="primary">GiftedHands</Typography>
                 </Box>
             </Box>
             <Box className={classes.mobileContainer} position="absolute" top="3.5%" right="5%" >

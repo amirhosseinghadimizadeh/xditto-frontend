@@ -33,7 +33,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>Mint/Redeem xDITTO</title>
+        <title>Mint/Redeem WGHD</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <Web3ReactProvider getLibrary={getLibrary}>
