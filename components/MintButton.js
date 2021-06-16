@@ -59,7 +59,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,F
         if (dittoContract)
             getAllowanceAmount();
 
-    }, [xDittoContract, dittoContract])
+    }, [FactoryContract, dittoContract])
 
     const showError = async (message) => {
         setErrorMessage(message);
