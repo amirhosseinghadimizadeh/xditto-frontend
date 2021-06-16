@@ -123,7 +123,7 @@ export default function MintForm() {
             setXDittoOutput(0);
         }
         else {
-            const inputDitto = ethers.utils.parseUnits(inputValue, 9);
+            const inputDitto = ethers.utils.parseUnits(inputValue, 18);
             getXDittoMintOutput(inputDitto)
             setXDittoOutput(inputValue-(inputValue/20))
         }
