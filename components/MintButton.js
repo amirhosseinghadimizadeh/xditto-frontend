@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FormButton({ xDittoContract, dittoContract, inputDitto }) {
     const classes = useStyles();
+     const MintFactory = new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner());
     const context = useWeb3React();
     const {
         connector,
