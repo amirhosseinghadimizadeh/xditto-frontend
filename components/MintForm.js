@@ -164,7 +164,7 @@ export default function MintForm() {
                                 }}>
                                 Max
                             </Button>
-                            <Typography>DITTO</Typography>
+                            <Typography>GHD</Typography>
                         </InputAdornment>,
                 }} />
             <ArrowDownwardIcon color="primary" style={{ fontSize: 70, marginTop: '5px', marginBottom: '5px' }} />
