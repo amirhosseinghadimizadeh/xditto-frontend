@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function FormButton({ xDittoContract, dittoContract, inputDitto,inputfactory }) {
+export default function FormButton({ xDittoContract, dittoContract, inputDitto,FactoryContract }) {
     const classes = useStyles();
     const context = useWeb3React();
     const {
