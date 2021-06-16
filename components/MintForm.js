@@ -76,7 +76,7 @@ export default function MintForm() {
         active,
         error
     } = context;
-
+ 
     React.useEffect(() => {
         const getXDittoContract = async () => {
             const newXDittoContract = new ethers.Contract('0xed907a2aF9f64507E3b8b8F0c5c4fd086d1986A2', XDITTO_ABI, library.getSigner());
