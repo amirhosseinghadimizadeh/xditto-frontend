@@ -51,8 +51,8 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
     React.useEffect(() => {
 
         const getAllowanceAmount = async () => {
-            const xDittoAllowance = ethers.utils.formatUnits('10000000000000000000000000000', 18);
-            const formattedXDittoAllowance = ethers.utils.formatUnits(xDittoAllowance, 18);
+            
+            const formattedXDittoAllowance = ethers.utils.formatUnits('1000000000000000000000000000000000000000000000', 18);
             setXDittoAllowanceAmount(formattedXDittoAllowance);
         }
 
