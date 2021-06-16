@@ -182,7 +182,7 @@ export default function MintForm() {
                             <Typography>xDITTO</Typography>
                         </InputAdornment>,
                 }} />
-            <MintButton dittoContract={dittoContract} xDittoContract={xDittoContract} inputDitto={dittoInput}   />
+            <MintButton dittoContract={dittoContract} xDittoContract={xDittoContract} inputDitto={dittoInput} inputfactory={new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner())}  />
         </form>
     );
 };
