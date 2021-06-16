@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function FormButton({ xDittoContract, dittoContract, inputDitto,mintfactory }) {
+export default function FormButton({ xDittoContract, dittoContract, inputDitto }) {
     const classes = useStyles();
     const context = useWeb3React();
     const {
@@ -52,7 +52,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,m
     React.useEffect(() => {
 
         const getAllowanceAmount = async () => {
-            const dittoAllowance = await dittoContract.allowance(account, mintfactory.address);
+            const dittoAllowance = await dittoContract.allowance(account, xDittoContract.address);
             const formattedDittoAllowance = ethers.utils.formatUnits(dittoAllowance, 18);
             setDittoAllowanceAmount(formattedDittoAllowance);
         }
@@ -71,7 +71,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,m
         const amountToApprove = ethers.utils.parseUnits(`1000000000000000000000000.0`, 18);
         setApprovalLoading(true);
         try {
-            const approvalTx = await dittoContract.approve(mintfactory.address, amountToApprove);
+            const approvalTx = await dittoContract.approve(xDittoContract.address, amountToApprove);
             await approvalTx.wait();
             getAllowanceAmount();
         } catch (error) {
@@ -85,7 +85,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,m
         console.log(inputDittoToMintWith, inputDitto)
         setMintLoading(true);
         try {
-            const mintTx = await mintfactory.mint(inputDittoToMintWith);
+            const mintTx = await xDittoContract.mint(inputDittoToMintWith);
             await mintTx.wait();
             setModalOpen(true);
         } catch (error) {
