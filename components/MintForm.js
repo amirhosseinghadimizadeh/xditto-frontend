@@ -80,7 +80,6 @@ export default function MintForm() {
     React.useEffect(() => {
         const getXDittoContract = async () => {
             const newXDittoContract = new ethers.Contract('0xed907a2aF9f64507E3b8b8F0c5c4fd086d1986A2', XDITTO_ABI, library.getSigner());
-            const MintFactory = new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner());
             setXDittoContract(newXDittoContract);
         }
 
@@ -125,7 +124,7 @@ export default function MintForm() {
     }
 
     const calculateXDittoMintOutput = debounce((inputValue) => handleInputChange(inputValue), 500);
-
+    const MintFactory = new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner());
 
     return (
         <form className={classes.mintForm} noValidate autoComplete="off">
