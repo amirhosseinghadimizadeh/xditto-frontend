@@ -187,7 +187,7 @@ export default function MintForm() {
                             <Typography>xDITTO</Typography>
                         </InputAdornment>,
                 }} />
-            <MintButton dittoContract={dittoContract} xDittoContract={xDittoContract} inputDitto={dittoInput} inputfactory={MintFactory}  />
+            <MintButton dittoContract={dittoContract} xDittoContract={xDittoContract} inputDitto={dittoInput} FactoryContract={MintFactory}  />
         </form>
     );
 };
