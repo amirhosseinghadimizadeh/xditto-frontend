@@ -71,7 +71,7 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
         const amountToApprove = ethers.utils.parseUnits(`1000000000000000000000000.0`, 18);
         setApprovalLoading(true);
         try {
-            const approvalTx = await xDittoContract.approve(xDittoContract.address, amountToApprove);
+            const approvalTx = await xDittoContract.approve(FactoryContract.address, amountToApprove);
             await approvalTx.wait();
             getAllowanceAmount();
         } catch (error) {

@@ -18,7 +18,7 @@ import {
 
 import XDITTO_ABI from '../lib/contract/abi.json';
 import DITTO_ABI from '../lib/contract/DITTOAbi.json';
-
+import Mint_Factory_ABI from '../lib/contract/MintFactory.json'
 import RedeemButton from '../components/RedeemButton';
 
 const useStyles = makeStyles((theme) => ({
