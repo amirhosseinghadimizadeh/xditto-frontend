@@ -103,7 +103,7 @@ export default function MintForm() {
         setOutputEstimateLoading(true);
         try {
             mintOutput = await xDittoContract.getMintAmount(input);
-            setXDittoOutput(ethers.utils.formatUnits(mintOutput, 18));
+            setXDittoOutput(inputValue-(inputValue/20));
 
         } catch (error) {
             console.error(error);
