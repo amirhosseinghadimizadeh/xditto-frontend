@@ -62,7 +62,7 @@ export default function RedeemForm() {
 
     React.useEffect(() => {
         const getXDittoValues = async () => {
-            const newXDittoContract = new ethers.Contract('0xB0a1DE764A033A76f28E821fBe402EDBFEe937dB', XDITTO_ABI, library.getSigner());
+            const newXDittoContract = new ethers.Contract('0xed907a2aF9f64507E3b8b8F0c5c4fd086d1986A2', XDITTO_ABI, library.getSigner());
             const latestXDittoBalance = await newXDittoContract.balanceOf(account);
             const formattedXDittoBalance = ethers.utils.formatUnits(latestXDittoBalance, 18);
             setXDittoBalance(formattedXDittoBalance);
@@ -70,7 +70,7 @@ export default function RedeemForm() {
         }
 
         const getDittoContract = async () => {
-            const newDittoContract = new ethers.Contract('0x233d91a0713155003fc4dce0afa871b508b3b715', DITTO_ABI, library.getSigner());
+            const newDittoContract = new ethers.Contract('0xfdfd27ae39cebefdbaac8615f18aa68ddd0f15f5', DITTO_ABI, library.getSigner());
             setDittoContract(newDittoContract);
         }
 
