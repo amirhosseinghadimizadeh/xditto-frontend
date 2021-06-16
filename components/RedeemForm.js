@@ -110,7 +110,7 @@ export default function RedeemForm() {
             <TextField
                 id="redeem-amount-input"
                 className={classes.inputField}
-                label="Amount of xDITTO to redeem from"
+                label="Amount of WGHD to redeem from"
                 variant="outlined"
                 color="primary"
                 value={inputXDitto}

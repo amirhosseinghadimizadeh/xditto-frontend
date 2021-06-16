@@ -135,7 +135,7 @@ export default function MintForm() {
             <StyledTextField
                 id="mint-amount-input"
                 className={classes.inputField}
-                label="Amount of DITTO to mint with"
+                label="Amount of GHD to mint with"
                 variant="outlined"
                 color="primary"
                 type="number"
