@@ -138,7 +138,7 @@ export default function RedeemForm() {
                             }}>
                             Max
                             </Button>
-                        <Typography>xDITTO</Typography>
+                        <Typography>WGHD</Typography>
                     </InputAdornment>,
                 }} />
             <ArrowDownwardIcon color="primary" style={{ fontSize: 70, marginTop: '5px', marginBottom: '5px' }} />
@@ -151,7 +151,7 @@ export default function RedeemForm() {
                 color="primary"
                 InputProps={{
                     readOnly: true,
-                    endAdornment: <InputAdornment position="start"><Typography>DITTO</Typography></InputAdornment>,
+                    endAdornment: <InputAdornment position="start"><Typography>GHD</Typography></InputAdornment>,
                 }}
             />
             <RedeemButton xDittoContract={xDittoContract} dittoContract={dittoContract} inputXDitto={inputXDitto} FactoryContract={MintFactory} />
