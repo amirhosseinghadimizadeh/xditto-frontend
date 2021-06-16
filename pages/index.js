@@ -173,8 +173,8 @@ export default function Index() {
       <DesktopWalletInfo dittoBalance={dittoBalance} xDittoBalance={xDittoBalance} exchangeRate={exchangeRate} usdPrice={usdPrice} />
       <Box marginY={3} className={classes.desktopTabs}>
         <StyledTabs centered="true" value={value} onChange={handleChange} aria-label="Navigation tabs">
-          <StyledTab label="Mint xDITTO" />
-          <StyledTab label="Redeem DITTO" />
+          <StyledTab label="Mint WGHD" />
+          <StyledTab label="Redeem GHD" />
         </StyledTabs>
         <Typography className={classes.padding} />
       </Box>
@@ -189,8 +189,8 @@ export default function Index() {
           textColor="primary"
           variant="fullWidth"
         >
-          <Tab label="Mint xDITTO" disableRipple {...a11yProps(0)} />
-          <Tab label="Redeem DITTO" disableRipple {...a11yProps(1)} />
+          <Tab label="Mint WGHD" disableRipple {...a11yProps(0)} />
+          <Tab label="Redeem GHD" disableRipple {...a11yProps(1)} />
         </Tabs>
       </Box>
       <MobileWalletInfo dittoBalance={dittoBalance} xDittoBalance={xDittoBalance} exchangeRate={exchangeRate} usdPrice={usdPrice} />
