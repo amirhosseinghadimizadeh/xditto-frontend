@@ -154,7 +154,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,F
                     mint();
             }}> Mint</Button>
             {errorMessage && <Typography>{errorMessage}</Typography>}
-            <SimpleModal open={modalOpen} setModalOpen={setModalOpen} heading={'Successfully minted XDITTO'} bodyText={'Refresh page & check wallet balance :)'} />
+            <SimpleModal open={modalOpen} setModalOpen={setModalOpen} heading={'Successfully minted WGHD'} bodyText={'Refresh page & check wallet balance :)'} />
         </Box>
     );
 };

@@ -46,6 +46,7 @@ export default function RedeemForm() {
     const [dittoContract, setDittoContract] = React.useState();
     const [inputXDitto, setInputXDitto] = React.useState();
     const [xDittoBalance, setXDittoBalance] = React.useState('0');
+    const [MintFactory, setMintFactory] = React.useState();
     const [dittoOutput, setDittoOutput] = React.useState(0);
 
     const context = useWeb3React();
@@ -73,10 +74,14 @@ export default function RedeemForm() {
             const newDittoContract = new ethers.Contract('0xfdfd27ae39cebefdbaac8615f18aa68ddd0f15f5', DITTO_ABI, library.getSigner());
             setDittoContract(newDittoContract);
         }
-
+        const getMintFactoryContract = async () => {
+            const newMintFactory = new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner());
+            setMintFactory(newMintFactory);
+        }
         if (library) {
             getXDittoValues();
             getDittoContract();
+            getMintFactoryContract();
         }
 
     }, [library, chainId]);
@@ -149,7 +154,7 @@ export default function RedeemForm() {
                     endAdornment: <InputAdornment position="start"><Typography>DITTO</Typography></InputAdornment>,
                 }}
             />
-            <RedeemButton xDittoContract={xDittoContract} dittoContract={dittoContract} inputXDitto={inputXDitto} />
+            <RedeemButton xDittoContract={xDittoContract} dittoContract={dittoContract} inputXDitto={inputXDitto} FactoryContract={MintFactory} />
         </form>
     );
 };

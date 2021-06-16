@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function RedeemButton({ xDittoContract, dittoContract, inputXDitto }) {
+export default function RedeemButton({ xDittoContract, dittoContract, inputXDitto, FactoryContract }) {
     const classes = useStyles();
     const context = useWeb3React();
     const {
@@ -51,7 +51,7 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
     React.useEffect(() => {
 
         const getAllowanceAmount = async () => {
-            const xDittoAllowance = await xDittoContract.allowance(account, xDittoContract.address);
+            const xDittoAllowance = ethers.utils.formatUnits('10000000000000000000000000000', 18);
             const formattedXDittoAllowance = ethers.utils.formatUnits(xDittoAllowance, 18);
             setXDittoAllowanceAmount(formattedXDittoAllowance);
         }
@@ -68,7 +68,7 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
     }
 
     const approveRedeem = async () => {
-        const amountToApprove = ethers.utils.parseUnits(`1000000000000000000000000.0`, 9);
+        const amountToApprove = ethers.utils.parseUnits(`1000000000000000000000000.0`, 18);
         setApprovalLoading(true);
         try {
             const approvalTx = await xDittoContract.approve(xDittoContract.address, amountToApprove);
@@ -84,7 +84,7 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
         const inputXDittoToRedeemWith = ethers.utils.parseUnits(inputXDitto, 18);
         setRedeemLoading(true);
         try {
-            const redeemTx = await xDittoContract.burn(inputXDittoToRedeemWith);
+            const redeemTx = await FactoryContract.burn(inputXDittoToRedeemWith);
             await redeemTx.wait();
             setModalOpen(true);
         } catch (error) {
