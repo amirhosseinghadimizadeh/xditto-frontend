@@ -184,7 +184,7 @@ export default function MintForm() {
                                     <CircularProgress color="primary" size={20} />
                                 </Box>
                                 : null}
-                            <Typography>xDITTO</Typography>
+                            <Typography>WGHD</Typography>
                         </InputAdornment>,
                 }} />
             <MintButton dittoContract={dittoContract} xDittoContract={xDittoContract} inputDitto={dittoInput} FactoryContract={MintFactory}  />
