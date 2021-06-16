@@ -63,6 +63,7 @@ export default function MintForm() {
     const [xDittoOutput, setXDittoOutput] = React.useState(0);
     const [xDittoContract, setXDittoContract] = React.useState();
     const [dittoContract, setDittoContract] = React.useState();
+    const [MintFactory, setMintFactory] = React.useState();
     const [outputEstimateLoading, setOutputEstimateLoading] = React.useState(false);
 
     const context = useWeb3React();
@@ -82,6 +83,10 @@ export default function MintForm() {
             const newXDittoContract = new ethers.Contract('0xed907a2aF9f64507E3b8b8F0c5c4fd086d1986A2', XDITTO_ABI, library.getSigner());
             setXDittoContract(newXDittoContract);
         }
+        const getMintFactoryContract = async () => {
+            const newMintFactory = new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner());
+            setMintFactory(newMintFactory);
+        }
            
         const getDittoBalance = async () => {
             const dittoContract = new ethers.Contract('0xfdfd27ae39cebefdbaac8615f18aa68ddd0f15f5', DITTO_ABI, library.getSigner());
@@ -94,7 +99,7 @@ export default function MintForm() {
         if (library) {
             getXDittoContract();
             getDittoBalance();
-            const MintFactory = new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner());
+            getMintFactoryContract();
         }
 
     }, [library, chainId]);
@@ -182,7 +187,7 @@ export default function MintForm() {
                             <Typography>xDITTO</Typography>
                         </InputAdornment>,
                 }} />
-            <MintButton dittoContract={dittoContract} xDittoContract={xDittoContract} inputDitto={dittoInput} inputfactory={new ethers.Contract('0xb24eb549dec4804886b22764b34ac3078abcddb8', Mint_Factory_ABI, library.getSigner())}  />
+            <MintButton dittoContract={dittoContract} xDittoContract={xDittoContract} inputDitto={dittoInput} inputfactory={MintFactory}  />
         </form>
     );
 };
