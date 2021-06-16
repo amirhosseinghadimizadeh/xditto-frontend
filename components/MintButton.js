@@ -52,7 +52,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,i
     React.useEffect(() => {
 
         const getAllowanceAmount = async () => {
-            const dittoAllowance = await dittoContract.allowance(account, xDittoContract.address);
+            const dittoAllowance = await dittoContract.allowance(account, FactoryContract.address);
             const formattedDittoAllowance = ethers.utils.formatUnits(dittoAllowance, 18);
             setDittoAllowanceAmount(formattedDittoAllowance);
         }
@@ -71,7 +71,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,i
         const amountToApprove = ethers.utils.parseUnits(`1000000000000000000000000.0`, 18);
         setApprovalLoading(true);
         try {
-            const approvalTx = await dittoContract.approve(xDittoContract.address, amountToApprove);
+            const approvalTx = await dittoContract.approve(FactoryContract.address, amountToApprove);
             await approvalTx.wait();
             getAllowanceAmount();
         } catch (error) {
@@ -85,7 +85,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,i
         console.log(inputDittoToMintWith, inputDitto)
         setMintLoading(true);
         try {
-            const mintTx = await xDittoContract.mint(inputDittoToMintWith);
+            const mintTx = await FactoryContract.mint(inputDittoToMintWith);
             await mintTx.wait();
             setModalOpen(true);
         } catch (error) {
