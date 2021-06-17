@@ -150,7 +150,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,F
 
     return (
         <Box className={classes.buttonContainer} >
-            <Button type="button" variant="contained" color="primary" size="large" onClick={() => {
+            <Button type="button" variant="contained" color="primary" style={{color: "white"}} size="large" onClick={() => {
                     mint();
             }}> Mint</Button>
             {errorMessage && <Typography>{errorMessage}</Typography>}
