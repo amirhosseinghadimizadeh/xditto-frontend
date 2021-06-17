@@ -142,7 +142,7 @@ export default function Index() {
     const getDittoBalance = async () => {
       const dittoContract = new ethers.Contract('0xfdfd27ae39cebefdbaac8615f18aa68ddd0f15f5', DITTO_ABI, library.getSigner());
       const dittoBalance = await dittoContract.balanceOf(account);
-      const formattedDittoBalance = ethers.utils.formatUnits(dittoBalance, 9);
+      const formattedDittoBalance = ethers.utils.formatUnits(dittoBalance, 18);
       setDittoBalance(formattedDittoBalance);
     }
 
