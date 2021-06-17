@@ -68,7 +68,7 @@ let darkTheme = createMuiTheme({
             main: red.A400,
         },
         background: {
-            default: '#4F1538',
+            default: '#0a0e16',
         },
         text: {
             primary: '#FFFFFF',
