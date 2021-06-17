@@ -78,9 +78,9 @@ export default function DesktopWalletInfo({ dittoBalance, xDittoBalance, exchang
                     :
                     account === null
                         ?
-                        <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`1 WGHD = ${`1 GHD`}</Typography>
+                        <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>1 GHD = 1 WGHD</Typography>
                         :
-                        <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`1 WGHD = ${`1 GHD`}</Typography>
+                        <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>1 WGHD = 1 GHD</Typography>
             }
         </Box>
     );
