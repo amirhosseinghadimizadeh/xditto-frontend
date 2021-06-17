@@ -14,6 +14,7 @@ import {
 import XDITTO_ABI from '../lib/contract/abi.json';
 import DITTO_ABI from '../lib/contract/DITTOAbi.json';
 import ORACLE_ABI from '../lib/contract/oracleAbi.json';
+import Mint_Factory_ABI from '../lib/contract/MintFactory.json'
 
 import MintForm from '../components/MintForm'
 import RedeemForm from '../components/RedeemForm'
@@ -129,7 +130,7 @@ export default function Index() {
 
   React.useEffect(() => {
     const getXDittoValues = async () => {
-      const xDittoContract = new ethers.Contract('0xB0a1DE764A033A76f28E821fBe402EDBFEe937dB', XDITTO_ABI, library.getSigner());
+      const xDittoContract = new ethers.Contract('0xed907a2aF9f64507E3b8b8F0c5c4fd086d1986A2', XDITTO_ABI, library.getSigner());
       const exchangeRate = await xDittoContract.getRedeemAmount(ethers.BigNumber.from("1000000000000000000"));
       const xDittoBalance = await xDittoContract.balanceOf(account);
       const formattedXDittoBalance = ethers.utils.formatUnits(xDittoBalance, 18)
@@ -139,7 +140,7 @@ export default function Index() {
     }
 
     const getDittoBalance = async () => {
-      const dittoContract = new ethers.Contract('0x233d91a0713155003fc4dce0afa871b508b3b715', DITTO_ABI, library.getSigner());
+      const dittoContract = new ethers.Contract('0xfdfd27ae39cebefdbaac8615f18aa68ddd0f15f5', DITTO_ABI, library.getSigner());
       const dittoBalance = await dittoContract.balanceOf(account);
       const formattedDittoBalance = ethers.utils.formatUnits(dittoBalance, 9);
       setDittoBalance(formattedDittoBalance);
