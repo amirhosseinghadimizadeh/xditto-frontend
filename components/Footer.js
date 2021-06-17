@@ -85,7 +85,7 @@ export default function Footer() {
                         <a href="https://t.me/GiftedHandsTokenChannel" target="_blank"><FontAwesomeIcon icon={faTelegram} size="2x" style={{ color: '#ED7AC0' }} /></a>
                         <a href="https://dittomoney.medium.com" target="_blank"><FontAwesomeIcon icon={faMedium} size="2x" style={{ color: '#ED7AC0' }} /></a>
                         <a href="https://twitter.com/giftedhandsGHD_" target="_blank"><FontAwesomeIcon icon={faTwitter} size="2x" style={{ color: '#ED7AC0' }} /></a>
-                        <a href="https://github.com/Ditto-money/" target="_blank"><FontAwesomeIcon icon={faGithub} size="2x" style={{ color: '#ED7AC0' }} /></a>
+                        <a href="https://github.com/Ditto-money/" target="_blank"><FontAwesomeIcon icon={falinkedin} size="2x" style={{ color: '#ED7AC0' }} /></a>
                     </Box>
                     <Box display="flex" alignItems="center" textAlign="center">
                         <Typography color="textPrimary">First elastic supply token on BSC <br /> Copywhat? 2021 Ditto.money</Typography>
