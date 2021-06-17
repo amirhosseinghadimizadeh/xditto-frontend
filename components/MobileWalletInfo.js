@@ -39,7 +39,7 @@ export default function MobileWalletInfo({ dittoBalance, xDittoBalance, exchange
     return (
         <Box className={classes.mobileContainer}>
             <Box textAlign='center'>
-                <Typography color="primary" variant="body2">DITTO in wallet</Typography>
+                <Typography color="primary" variant="body2">GHD in wallet</Typography>
                 {
                     account === undefined
                         ?
@@ -50,9 +50,9 @@ export default function MobileWalletInfo({ dittoBalance, xDittoBalance, exchange
                             <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{None}</Typography>
                             :
                             <Box>
-                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{`${parseFloat(dittoBalance).toFixed(4)} DITTO`}</Typography>
+                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{`${parseFloat(dittoBalance).toFixed(4)} GHD`}</Typography>
                                 <br />
-                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '5px' }}>{`${dittoInUSD.toFixed(2)} USD`}</Typography>
+
                             </Box>
                 }
             </Box>
@@ -68,9 +68,8 @@ export default function MobileWalletInfo({ dittoBalance, xDittoBalance, exchange
                             <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{None}</Typography>
                             :
                             <Box>
-                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{`${parseFloat(xDittoBalance).toFixed(4)} xDITTO`}</Typography>
+                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{`${parseFloat(xDittoBalance).toFixed(4)} WGHD`}</Typography>
                                 <br />
-                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '5px' }}>{`${xDittoInUSD.toFixed(2)} USD`}</Typography>
                             </Box>
 
 
@@ -88,9 +87,8 @@ export default function MobileWalletInfo({ dittoBalance, xDittoBalance, exchange
                             <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{Unavailable}</Typography>
                             :
                             <Box>
-                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{`1 xDITTO`}</Typography>
+                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{`1 WGHD`}</Typography>
                                 <br />
-                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '2px' }}>{`${parseFloat(exchangeRate).toFixed(4)} DITTO`}</Typography>
                             </Box>
                 }
             </Box>
