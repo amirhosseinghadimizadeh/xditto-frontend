@@ -48,8 +48,8 @@ export default function DesktopWalletInfo({ dittoBalance, xDittoBalance, exchang
                         <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{None}</Typography>
                         :
                         <Box textAlign='center'>
-                            <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`${parseFloat(dittoBalance).toFixed(4)} DITTO`}</Typography>
-                            <Typography color="textPrimary" variant="body2" style={{ paddingTop: '5px' }}>{`${dittoInUSD.toFixed(2)} USD`}</Typography>
+                            <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`${parseFloat(dittoBalance).toFixed(4)} GHD`}</Typography>
+
                         </Box>
 
             }
@@ -64,8 +64,8 @@ export default function DesktopWalletInfo({ dittoBalance, xDittoBalance, exchang
                         <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{None}</Typography>
                         :
                         <Box textAlign='center'>
-                            <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`${parseFloat(xDittoBalance).toFixed(4)} xDITTO`}</Typography>
-                            <Typography color="textPrimary" variant="body2" style={{ paddingTop: '5px' }}>{`${xDittoInUSD.toFixed(2)} USD`}</Typography>
+                            <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`${parseFloat(xDittoBalance).toFixed(4)} WGHD`}</Typography>
+                            
                         </Box>
 
 
@@ -78,9 +78,9 @@ export default function DesktopWalletInfo({ dittoBalance, xDittoBalance, exchang
                     :
                     account === null
                         ?
-                        <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{Unavailable}</Typography>
+                        <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`1 WGHD = ${`1 GHD`}</Typography>
                         :
-                        <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`1 xDITTO = ${parseFloat(exchangeRate).toFixed(4)} DITTO`}</Typography>
+                        <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`1 WGHD = ${`1 GHD`}</Typography>
             }
         </Box>
     );
