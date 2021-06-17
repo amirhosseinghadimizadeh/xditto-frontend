@@ -65,7 +65,7 @@ export default function Footer() {
                         <a href="https://twitter.com/giftedhandsGHD_" target="_blank"><FontAwesomeIcon icon={faTwitter} size="2x" style={{ color: '#ED7AC0' }} /></a>
                     </Box>
                     <Box display="flex" alignItems="center" paddingRight={'5%'}>
-                        <Typography color="textPrimary">First elastic supply token on BSC <br /> Copywhat? 2021 Ditto.money</Typography>
+                        <Typography color="textPrimary">GiftedHands Token Wrapper</Typography>
                     </Box>
                 </Box>
             </Box>
