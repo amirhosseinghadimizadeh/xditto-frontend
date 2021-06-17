@@ -64,7 +64,7 @@ export default function DesktopWalletInfo({ dittoBalance, xDittoBalance, exchang
                         <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{None}</Typography>
                         :
                         <Box textAlign='center'>
-                            <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`${xDittoBalance} xDITTO`}</Typography>
+                            <Typography color="textPrimary" variant="body2" style={{ paddingTop: '10px' }}>{`${parseFloat(xDittoBalance).toFixed(4)} xDITTO`}</Typography>
                             <Typography color="textPrimary" variant="body2" style={{ paddingTop: '5px' }}>{`${xDittoInUSD.toFixed(2)} USD`}</Typography>
                         </Box>
 

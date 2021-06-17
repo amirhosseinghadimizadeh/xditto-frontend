@@ -131,21 +131,15 @@ export default function Index() {
   React.useEffect(() => {
     const getXDittoValues = async () => {
       const xDittoContract = new ethers.Contract('0xed907a2aF9f64507E3b8b8F0c5c4fd086d1986A2', XDITTO_ABI, library.getSigner());
-      const exchangeRate = await xDittoContract.getRedeemAmount(ethers.BigNumber.from("1000000000000000000"));
       const xDittoBalance = await xDittoContract.balanceOf(account);
       const formattedXDittoBalance = ethers.utils.formatUnits(xDittoBalance, 18)
-      const formattedExchangeRate = ethers.utils.formatUnits(exchangeRate, 18);
-     
-      setExchangeRate(formattedExchangeRate);
+      setXDittoBalance(formattedXDittoBalance);
     }
 
     const getDittoBalance = async () => {
       const dittoContract = new ethers.Contract('0xfdfd27ae39cebefdbaac8615f18aa68ddd0f15f5', DITTO_ABI, library.getSigner());
       const dittoBalance = await dittoContract.balanceOf(account);
       const formattedDittoBalance = ethers.utils.formatUnits(dittoBalance, 18);
-      const xDittoBalance = await xDittoContract.balanceOf(account);
-      const formattedXDittoBalance = ethers.utils.formatUnits(xDittoBalance, 18)
-      setXDittoBalance(formattedXDittoBalance);
       setDittoBalance(formattedDittoBalance);
     }
 
