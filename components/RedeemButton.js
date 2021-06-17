@@ -117,7 +117,7 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
             <Box className={classes.buttonContainer} >
                 <Button type="button" variant="contained" color="primary" size="large">
                     <Box paddingRight={2} paddingTop={1}>
-                        <CircularProgress color="white" size={20} />
+                        <CircularProgress color="white"  size={20} />
                     </Box>
                     Approval loading
                 </Button>
@@ -128,7 +128,7 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
     if (parseInt(xDittoAllowanceAmount) === 0) {
         return (
             <Box className={classes.buttonContainer} >
-                <Button type="button" variant="contained" color="primary" size="large" onClick={() => {
+                <Button type="button" variant="contained" style={{color: "white"}} color="primary" size="large" onClick={() => {
                     approveRedeem();
                 }}> Approve Redeem</Button >
             </Box>
@@ -138,7 +138,7 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
     if (redeemLoading) {
         return (
             <Box className={classes.buttonContainer} >
-                <Button type="button" variant="contained" color="primary" size="large">
+                <Button type="button" variant="contained" style={{color: "white"}} color="primary" size="large">
                     <Box paddingRight={2} paddingTop={1}>
                         <CircularProgress color="white" size={20} />
                     </Box>
@@ -151,7 +151,7 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
     return (
         <Box className={classes.buttonContainer} >
             <div>
-                <Button type="button" variant="contained" color="primary" size="large" onClick={() => {
+                <Button type="button" variant="contained" style={{color: "white"}} color="primary" size="large" onClick={() => {
                     redeem();
                 }}> Redeem</Button>
             </div>
