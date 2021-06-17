@@ -135,7 +135,7 @@ export default function Index() {
       const xDittoBalance = await xDittoContract.balanceOf(account);
       const formattedXDittoBalance = ethers.utils.formatUnits(xDittoBalance, 18)
       const formattedExchangeRate = ethers.utils.formatUnits(exchangeRate, 18);
-      setXDittoBalance(formattedXDittoBalance);
+     
       setExchangeRate(formattedExchangeRate);
     }
 
@@ -143,6 +143,9 @@ export default function Index() {
       const dittoContract = new ethers.Contract('0xfdfd27ae39cebefdbaac8615f18aa68ddd0f15f5', DITTO_ABI, library.getSigner());
       const dittoBalance = await dittoContract.balanceOf(account);
       const formattedDittoBalance = ethers.utils.formatUnits(dittoBalance, 18);
+      const xDittoBalance = await xDittoContract.balanceOf(account);
+      const formattedXDittoBalance = ethers.utils.formatUnits(xDittoBalance, 18)
+      setXDittoBalance(formattedXDittoBalance);
       setDittoBalance(formattedDittoBalance);
     }
 
