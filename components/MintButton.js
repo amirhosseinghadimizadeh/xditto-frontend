@@ -115,7 +115,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,F
     if (approvalLoading) {
         return (
             <Box className={classes.buttonContainer} >
-                <Button type="button" variant="contained" color="white" size="large">
+                <Button type="button" variant="contained" color="primary" size="large">
                     <Box paddingRight={2} paddingTop={1}>
                         <CircularProgress color="#ffffff" size={20} />
                     </Box>
@@ -128,7 +128,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,F
     if (parseInt(dittoAllowanceAmount) === 0) {
         return (
             <Box className={classes.buttonContainer} >
-            <Button type="button" variant="contained" color="white" size="large" onClick={() => {
+            <Button type="button" variant="contained" color="primary" size="large" onClick={() => {
                 approveMint();
                 }}> Approve Mint</Button>
             </Box>
@@ -138,7 +138,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,F
     if (mintLoading) {
         return (
             <Box className={classes.buttonContainer} >
-                <Button type="button" variant="contained" color="white" size="large" >
+                <Button type="button" variant="contained" color="primary" size="large" >
                     <Box paddingRight={2} paddingTop={1}>
                         <CircularProgress color="#ffffff" size={20} />
                     </Box>
@@ -150,7 +150,7 @@ export default function FormButton({ xDittoContract, dittoContract, inputDitto,F
 
     return (
         <Box className={classes.buttonContainer} >
-            <Button type="button" variant="contained" color="white" size="large" onClick={() => {
+            <Button type="button" variant="contained" color="primary" size="large" onClick={() => {
                     mint();
             }}> Mint</Button>
             {errorMessage && <Typography>{errorMessage}</Typography>}
