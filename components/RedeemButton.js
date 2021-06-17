@@ -156,7 +156,7 @@ export default function RedeemButton({ xDittoContract, dittoContract, inputXDitt
                 }}> Redeem</Button>
             </div>
             {errorMessage && <Typography>{errorMessage}</Typography>}
-            <SimpleModal open={modalOpen} setModalOpen={setModalOpen} heading={'Successfully redeemed DITTO'} bodyText={'Refresh page & check wallet balance :)'} />
+            <SimpleModal open={modalOpen} setModalOpen={setModalOpen} heading={'Successfully redeemed GHD'} bodyText={'Refresh page & check wallet balance :)'} />
         </Box>
     );
 };
