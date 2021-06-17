@@ -57,7 +57,7 @@ export default function MobileWalletInfo({ dittoBalance, xDittoBalance, exchange
                 }
             </Box>
             <Box textAlign='center'>
-                <Typography color="primary" variant="body2">xDITTO in wallet</Typography>
+                <Typography color="primary" variant="body2">WGHD in wallet</Typography>
                 {
                     account === undefined
                         ?
@@ -87,7 +87,7 @@ export default function MobileWalletInfo({ dittoBalance, xDittoBalance, exchange
                             <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{Unavailable}</Typography>
                             :
                             <Box>
-                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{`1 WGHD`}</Typography>
+                                <Typography color="textPrimary" variant="caption" style={{ paddingTop: '10px' }}>{`1 WGHD = 1 GHD`}</Typography>
                                 <br />
                             </Box>
                 }
