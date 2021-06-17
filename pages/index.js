@@ -133,7 +133,7 @@ export default function Index() {
       const xDittoContract = new ethers.Contract('0xed907a2aF9f64507E3b8b8F0c5c4fd086d1986A2', XDITTO_ABI, library.getSigner());
       const exchangeRate = await xDittoContract.getRedeemAmount(ethers.BigNumber.from("1000000000000000000"));
       const xDittoBalance = await xDittoContract.balanceOf(account);
-      const formattedXDittoBalance = ethers.utils.formatUnits(xDittoBalance, 18)
+      const formattedXDittoBalance = ethers.utils.formatUnits(xDittoBalance, 1)
       const formattedExchangeRate = ethers.utils.formatUnits(exchangeRate, 9);
       setXDittoBalance(formattedXDittoBalance);
       setExchangeRate(formattedExchangeRate);
