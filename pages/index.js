@@ -84,7 +84,7 @@ const StyledTabs = withStyles({
     '& > span': {
       maxWidth: 90,
       width: '100%',
-      backgroundColor: '#ED7AC0',
+      backgroundColor: '#61be6c',
     },
   },
 })((props) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);

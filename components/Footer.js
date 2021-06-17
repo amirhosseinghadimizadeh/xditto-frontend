@@ -61,8 +61,8 @@ export default function Footer() {
                         />
                     </Box>
                     <Box display="flex" alignItems="center" paddingLeft={5} width="45%" justifyContent="space-evenly">
-                        <a href="https://t.me/GiftedHandsTokenChannel" target="_blank"><FontAwesomeIcon icon={faTelegram} size="2x" style={{ color: '#ED7AC0' }} /></a>
-                        <a href="https://twitter.com/giftedhandsGHD_" target="_blank"><FontAwesomeIcon icon={faTwitter} size="2x" style={{ color: '#ED7AC0' }} /></a>
+                        <a href="https://t.me/GiftedHandsTokenChannel" target="_blank"><FontAwesomeIcon icon={faTelegram} size="2x" style={{ color: '#61be6c' }} /></a>
+                        <a href="https://twitter.com/giftedhandsGHD_" target="_blank"><FontAwesomeIcon icon={faTwitter} size="2x" style={{ color: '#61be6c' }} /></a>
                     </Box>
                     <Box display="flex" alignItems="center" paddingRight={'5%'}>
                         <Typography color="textPrimary">GiftedHands Token Wrapper</Typography>
@@ -80,8 +80,8 @@ export default function Footer() {
                         />
                     </Box>
                     <Box display="flex" alignItems="center" width="100%" justifyContent="space-evenly" marginY="5%">
-                        <a href="https://t.me/GiftedHandsTokenChannel" target="_blank"><FontAwesomeIcon icon={faTelegram} size="2x" style={{ color: '#ED7AC0' }} /></a>
-                        <a href="https://twitter.com/giftedhandsGHD_" target="_blank"><FontAwesomeIcon icon={faTwitter} size="2x" style={{ color: '#ED7AC0' }} /></a>
+                        <a href="https://t.me/GiftedHandsTokenChannel" target="_blank"><FontAwesomeIcon icon={faTelegram} size="2x" style={{ color: '#61be6c' }} /></a>
+                        <a href="https://twitter.com/giftedhandsGHD_" target="_blank"><FontAwesomeIcon icon={faTwitter} size="2x" style={{ color: '#61be6c' }} /></a>
                     </Box>
                     <Box display="flex" alignItems="center" textAlign="center">
                         <Typography color="textPrimary">GiftedHands Token Wrapper</Typography>
