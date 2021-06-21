@@ -37,7 +37,7 @@ export default function DesktopWalletInfo({ dittoBalance, xDittoBalance, exchang
 
     return (
         <Box className={classes.desktopContainer} position="absolute" top="25%" right="7.5%" display="flex" flexDirection="column" alignItems="center">
-            <Typography color="primary" variant="h6">DITTO in wallet</Typography>
+            <Typography color="primary" variant="h6">GHD in wallet</Typography>
             {
                 account === undefined
                     ?
@@ -53,7 +53,7 @@ export default function DesktopWalletInfo({ dittoBalance, xDittoBalance, exchang
                         </Box>
 
             }
-            <Typography color="primary" variant="h6" style={{ paddingTop: '40px' }}>xDITTO in wallet</Typography>
+            <Typography color="primary" variant="h6" style={{ paddingTop: '40px' }}>WGHD in wallet</Typography>
             {
                 account === undefined
                     ?
