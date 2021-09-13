@@ -109,7 +109,7 @@ export default function MintForm() {
         setOutputEstimateLoading(true);
         try {
             mintOutput = await xDittoContract.getMintAmount(input);
-            setXDittoOutput(inputValue-(inputValue/20));
+            setXDittoOutput(inputValue-(inputValue/5));
 
         } catch (error) {
             console.error(error);
@@ -125,7 +125,7 @@ export default function MintForm() {
         else {
             const inputDitto = ethers.utils.parseUnits(inputValue, 18);
             getXDittoMintOutput(inputDitto)
-            setXDittoOutput(inputValue-(inputValue/20))
+            setXDittoOutput(inputValue-(inputValue/5))
         }
     }
 
