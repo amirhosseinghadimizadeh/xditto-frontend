@@ -88,7 +88,7 @@ export default function RedeemForm() {
 
     const getDittoRedeemOutput = async (input) => {
         const redeemOutput = await xDittoContract.getRedeemAmount(input);
-        setDittoOutput(inputValue-(inputValue/20));
+        setDittoOutput(inputValue-(inputValue/5));
     }
 
     const handleInputChange = (inputValue) => {
@@ -97,7 +97,7 @@ export default function RedeemForm() {
         }
         else {
             const inputXDitto = ethers.utils.parseUnits(inputValue, 18);
-           setDittoOutput(inputValue-(inputValue/20));
+           setDittoOutput(inputValue-(inputValue/5));
 
         }
     }
